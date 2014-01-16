@@ -1,0 +1,28 @@
+
+<h1> ALL POSTS </h1>
+
+{% if latest_post_list %}
+    <ul>
+    {% for post in latest_post_list %}
+        <li><a href="/blog/post/{{ post.id }}/">{{ post.title }}</a> {{ post.pub_date}} </li>
+        <br/> Author: {{ post.author }}
+        <br/>
+        <br/> 
+        Categories: 
+        {% for category in post.categories.all %}
+        <a href="/blog/category/{{ category.id }}/">{{ category.title}}</a> 
+        {% endfor %}   
+        <br/>
+        <br/>
+        Tags:
+        {% for tag in post.tags.all %}
+        <a href="/blog/tag/{{ tag.id }}/">{{ tag.name}}</a> 
+        {% endfor %}
+        <br/>
+        <br/>
+        <br/>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No posts are available.</p>
+{% endif %}

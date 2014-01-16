@@ -1,0 +1,37 @@
+
+<h1> POST SELECTED </h1>
+
+<section>
+    <article>
+        <hgroup>
+            <h1>{{ post.title|safe }}</h1>
+            <h4>{{ post.pub_date}}</h4>
+        </hgroup>
+        {{ post.text|safe }}
+        <br/>
+        <br/>
+        Categories:
+            {% for category in post.categories.all %}
+                <a href="/blog/category/{{ category.id }}/">{{ category.title }}</a>
+            {% endfor %}
+        <br/>
+        <br/>
+        Tags:
+            {% for tag in post.tags.all %}
+                <a href="/blog/tag/{{ tag.id }}/">{{ tag.name }}</a>
+            {% endfor %}  
+        <br/>
+        <br/>
+        Comments: {{ allcomments|length }}
+            {% if allcomments %}
+                {% for com in allcomments %}
+                <li> {{ com.comment }} - {{ com.pub_date }} - {{ com.user }}</li>
+            {% endfor %}
+            {% else %}
+                <br/>
+                No comments available yet...
+            {% endif %}
+
+    </article>
+</section>
+

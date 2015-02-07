@@ -1,3 +1,3 @@
-# Blog-Django-Python
-Developed during my fourth course of Telecom Engineering Degree at ETSIT-UPM. The project is a Spanish blog about football, sport news… It was the final project of a subject, in which a classmate and I had to demonstrate our skills learned during the semester: JavaScript, HTML & CSS. To sum up, the blog is developed in JavaScript and HTML, and Bootstrap is used for style. It allows users to register, post, comment and favorite posts. Also, it includes media, visits counter and a search function. For development, I used Express (a node.js web framework), but the blog is currently deployed on the free version of Heroku:  http://blogeasports-final.herokuapp.com
+# Django Blog
+A simple project developed in Django, a high level Python Web Framework. It is a simple blog, in which users can publish their own posts, write comments in other posts. Moreover, posts can be classified into categories and tags. It also has an API REST built in Json. The main goal of this project was to learn Python and Django, because both of them were needed to develop Django apps for AGBO Training.
 
